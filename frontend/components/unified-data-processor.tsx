@@ -64,7 +64,8 @@ interface ProcessedData {
   }>;
 }
 
-const API_BASE_URL = "http://127.0.0.1:5000";
+//const API_BASE_URL = "http://127.0.0.1:5000";
+const API_BASE_URL = "https://feedback-insights-dashboard.onrender.com/";
 
 export default function UnifiedDataProcessor() {
   const [activeTab, setActiveTab] = useState("url");
