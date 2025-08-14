@@ -1,8 +1,8 @@
 Flask==2.3.3
 Flask-CORS==4.0.0
 requests==2.31.0
-numpy==1.25.2
-pandas==2.1.1
+numpy==2.0.2
+pandas==2.2.2
 textblob==0.17.1
 vaderSentiment==3.3.2
 gunicorn==21.2.0
