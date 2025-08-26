@@ -153,7 +153,9 @@ export function BeautifulBarChart({
         <RechartsBarChart
           data={chartData}
           layout={horizontal ? "vertical" : "horizontal"}
-          margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+          margin={{ top: 20, right: 30, left: horizontal ? 120 : 20, bottom: 5 }}
+          barCategoryGap={horizontal ? "12%" : "20%"}
+          barGap={horizontal ? 4 : 2}
         >
           {showGrid && (
             <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" opacity={0.5} />
@@ -291,16 +293,18 @@ export function InstructorPerformanceChart({
   });
 
   return (
-    <BeautifulBarChart
-      {...props}
-      data={performanceData}
-      colorScheme="custom"
-      customColors={performanceData.map((d) => d.color)}
-      title="Instructor Performance Analysis"
-      description="Color-coded by performance: Green (4.0+) • Orange (3.5-4.0) • Red (<3.5)"
-      horizontal={true}
-      showLegend={true}
-    />
+    <div className="w-full">
+      <BeautifulBarChart
+        {...props}
+        data={performanceData}
+        colorScheme="custom"
+        customColors={performanceData.map((d) => d.color)}
+        title=""
+        description=""
+        horizontal={true}
+        showLegend={false}
+      />
+    </div>
   );
 }
 
