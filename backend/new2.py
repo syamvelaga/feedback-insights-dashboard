@@ -12,6 +12,7 @@ import json
 import os
 import hashlib
 
+
 app = Flask(__name__)
 CORS(app)
 

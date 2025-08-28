@@ -292,8 +292,23 @@ export function BeautifulDashboard({
                   className="p-4 border-l-4 border-red-500 bg-red-50 rounded-r-lg hover:bg-red-100 transition-colors duration-200"
                 >
                   <div className="flex justify-between items-start mb-3">
-                    <div />
-                    <div className="text-right space-y-1">
+                    <div className="flex-1">
+                      <div className="space-y-2 text-sm text-gray-700">
+                        <p>
+                          <span className="font-semibold">Instructor:</span>{" "}
+                          <span className="font-semibold text-gray-900">{entry.instructor}</span>
+                        </p>
+                        <p>
+                          <span className="font-semibold">Student:</span>{" "}
+                          <span className="font-normal">{entry.student_name}</span>
+                        </p>
+                        <p>
+                          <span className="font-semibold">Feedback:</span>{" "}
+                          <span className="italic">"{entry.feedback}"</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div className="text-right space-y-1 ml-4 flex-shrink-0">
                       <div className="text-lg font-bold text-red-600">
                         Rating: {entry.rating}/5
                       </div>
@@ -308,20 +323,6 @@ export function BeautifulDashboard({
                         </div>
                       )}
                     </div>
-                  </div>
-                  <div className="space-y-2 text-sm text-gray-700">
-                    <p>
-                      <span className="font-semibold">Instructor:</span>{" "}
-                      <span className="font-semibold text-gray-900">{entry.instructor}</span>
-                    </p>
-                    <p>
-                      <span className="font-semibold">Student:</span>{" "}
-                      <span className="font-normal">{entry.student_name}</span>
-                    </p>
-                    <p>
-                      <span className="font-semibold">Feedback:</span>{" "}
-                      <span className="italic">"{entry.feedback}"</span>
-                    </p>
                   </div>
                 </div>
               ))}
